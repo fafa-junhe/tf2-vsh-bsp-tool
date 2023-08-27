@@ -94,6 +94,7 @@ def create_logic_script_entity():
 	[
 		("classname", "logic_script"),
 		("targetname", "logic_script_vsh"),
+		("thinkfunction", "Tick"),
 		("vscripts", "vssaxtonhale/vsh.nut"),
 		("origin", "0 0 0")
 	]
@@ -168,6 +169,9 @@ def remove_unneeded_entities(ent_list):
 
 	if removed_koth:
 		print("Removed tf_logic_koth")
+		
+	if removed_regenerate:
+		print("Removed func_regenerate")
 
 	return removed_arena or removed_koth
 
